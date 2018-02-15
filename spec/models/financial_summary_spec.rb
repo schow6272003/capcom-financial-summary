@@ -27,7 +27,7 @@ describe FinancialSummary do
                    amount: Money.from_amount(5, :cad))
           end
 
-          Timecop.travel(Time.now - 2.days) do
+          Timecop.travel(Time.now - 10.days) do
             create(:transaction, user: user,
                    action: :credit, category: :deposit,
                    amount: Money.from_amount(3.12, :usd))
