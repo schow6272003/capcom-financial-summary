@@ -9,9 +9,9 @@
     - A summary spans over one day, seven days and a lifetime of a user's transactions
 
 ## The Problem
-Implement the logic for the `FinancialSummary`.
-There are pending specs that you should make pass.
-The specs are non-exhaustive (hint hint).
+- Implement the logic for the `FinancialSummary`.
+- There are pending specs that you should make pass.
+- The specs are non-exhaustive (hint hint).
 
 ## Additional Test Cases
 FinancialSummary:
