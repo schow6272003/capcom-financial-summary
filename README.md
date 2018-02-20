@@ -17,5 +17,7 @@
 FinancialSummary:
  - check if FinancialSummary will correctly show summary from correct user.
  - check if correctly display correct summary span over one day.
+ - check if total amount of transactions per user is correct.
+ - check if total count of transactions per user is correct.
 
 
