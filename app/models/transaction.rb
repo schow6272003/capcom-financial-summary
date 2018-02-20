@@ -1,4 +1,5 @@
 class Transaction < ApplicationRecord
+  include ConfigHelper
   monetize :amount_cents
 
   validate :action_category_match
@@ -13,11 +14,11 @@ class Transaction < ApplicationRecord
 
   def action_category_match
     if action.to_sym == :credit
-      if !%w[deposit refund purchase].include?(category)
+      if !ConfigHelper::TRANSACTION_CREDIT.include?(category)
         errors.add(:base, 'Credits must be in category deposit, refund or purchase.')
       end
     elsif action.to_sym == :debit
-      if !%w[withdraw ante].include?(category)
+      if !ConfigHelper::TRANSACTION_DEBIT.include?(category)
         errors.add(:base, 'Debits must be in category withdraw or ante.')
       end
     end
